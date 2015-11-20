@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="lib/jquery-1.11.2.min.js"></script>
+	<script src="lib/jquery-ui.min.js"></script>
+	<script src="lib/jquery.hotkeys.js"></script>
+	<script src="lib/markdown.min.js"></script>
+	<link rel="stylesheet" href="lib/font-awesome.min.css">
+	<link rel="stylesheet" href="src/style.css">
+	<link rel="stylesheet" href="theme/default.css">
+</head>
+<body>
+<div class="page" id="page">
+	<div class="header reset">
+		<ul class="tab">
+			<li class="active" id="preview-sw"><span>Preview</span></li>
+			<li id="source-sw"><span>Code</span></li>
+		</ul>
+
+		<dl class="menu">
+			<dt><span class="fa fa-bars"></span></dt>
+			<dd>
+				Theme:
+				<select id="theme-sel">
+					<option value="">Default</option>
+					<option value="">Sunshine</option>
+				</select>
+			</dd>
+			<dd>
+				<span class="menu-item" id="save-html-btn">
+					<i class="fa fa-save"></i> Save HTML
+				</span>
+			</dd>
+			<dd>
+				<span class="menu-item" id="save-md-btn">
+					<i class="fa fa-save"></i> Save As MarkDown Text
+				</span>
+			</dd>
+		</dl>
+	</div>
+
+	<div id="source" class="source" style="display:none;">
+		<code></code>
+	</div>
+
+	<div id="article" class="article">
+		article
+	</div>
+
+	<div id="editor" class="editor reset">
+		<ul class="editor-tools editor-tools-main">
+			<li>
+				<span class="ico" title="Sync Scroll">
+					<label><input type="checkbox" id="ss-chk" checked="checked"> Sync Scroll</label>
+				</span>
+			</li>
+			<li>
+				<span class="ico" title="Highlight Editor &amp; Page">
+					<label>
+						<input type="checkbox" id="hep-chk" checked="checked">
+						Highlight Window
+					</label>
+				</span>
+			</li>
+			<li>
+				<a href="http://www.appinn.com/markdown/" target="_blank">Syntax Help</a>
+			</li>
+		</ul>
+		<ul class="editor-tools editor-tools-win">
+			<li>
+				<span class="fa fa-clone" id="win-switch-restore" style="display:none;"></span>
+				<span class="fa fa-minus-square-o" id="win-switch-minimize"></span>
+			</li>
+		</ul>
+		<textarea></textarea>
+	</div>
+</div>
+<script src="src/script.js"></script>
+</body>
+</html>
